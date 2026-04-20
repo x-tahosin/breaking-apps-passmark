@@ -1,0 +1,28 @@
+{
+  "name": "breaking-apps-passmark",
+  "version": "1.0.0",
+  "description": "AI-powered regression test suite for 5 production web apps using Passmark + Playwright. Built for the Hashnode Breaking Apps Hackathon.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test --project chromium",
+    "test:headed": "npx playwright test --project chromium --headed",
+    "test:hocks": "npx playwright test tests/01-hocks-ai-auth.spec.ts tests/02-hocks-ai-chat.spec.ts --project chromium",
+    "test:commerce": "npx playwright test tests/03-vercel-commerce.spec.ts --project chromium",
+    "test:calcom": "npx playwright test tests/04-cal-com.spec.ts --project chromium",
+    "test:hoppscotch": "npx playwright test tests/05-hoppscotch.spec.ts --project chromium",
+    "test:documenso": "npx playwright test tests/06-documenso.spec.ts --project chromium",
+    "test:ecosense": "npx playwright test tests/07-ecosense-ai.spec.ts --project chromium",
+    "report": "npx playwright show-report"
+  },
+  "keywords": ["passmark", "playwright", "ai-testing", "regression-testing", "hackathon"],
+  "author": "S M Tahosin <x.tahosin@gmail.com>",
+  "license": "MIT",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^25.6.0",
+    "dotenv": "^17.4.2",
+    "passmark": "^1.0.8",
+    "typescript": "^6.0.3"
+  }
+}
